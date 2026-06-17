@@ -1,0 +1,25 @@
+/* 繁體中文（zh-Hant） */
+I18n.register('zh-Hant', {
+  'title.suffix': 'HTML Viewer',
+  'empty.title': '拖拉 HTML 片段到頁面任意位置',
+  'empty.hint': '檔案會上傳到 <code>/upload/html-viewer</code>，同名直接覆寫；<br />或<u>點此選擇檔案</u>。支援 <code>.html</code> / <code>.htm</code>。<br />也可用 <code>?link=&lt;路徑&gt;</code> 直接開啟。',
+  'drop.text': '放開以上傳到 /upload/html-viewer',
+  'side.header': '檔案清單',
+  'side.noFiles': '尚無檔案，拖拉上傳吧',
+  'loading': '載入中…',
+  'badge.fullDoc': '完整文件',
+  'tool.menu': '檔案清單',
+  'tool.mode': '切換 light / dark',
+  'tool.lang': '語言',
+  'tool.clear': '清空 /upload/html-viewer',
+  'tool.openOriginal': '在新分頁開啟原始檔',
+  'toast.badLink': '不允許的路徑（擋路徑穿越 / 外部協定）',
+  'toast.loadFail': '載入失敗：{n}（{m}）',
+  'toast.notHtml': '請拖入 HTML 檔（.html / .htm）',
+  'toast.uploaded': '已上傳：{n}',
+  'toast.uploadFail': '上傳失敗：{n}（{m}）',
+  'toast.listFail': '讀取檔案清單失敗：{m}',
+  'toast.cleared': '已清空 {n} 個檔案',
+  'toast.clearFail': '清空失敗：{m}',
+  'confirm.clear': '確定要清空 /upload/html-viewer 下的所有檔案嗎？此動作無法復原。'
+}, '繁體中文');

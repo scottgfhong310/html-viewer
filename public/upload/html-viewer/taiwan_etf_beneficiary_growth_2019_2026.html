@@ -1,0 +1,131 @@
+<h2 class="sr-only">Taiwan stock ETF beneficiary count growth from 460,000 in 2019 to 14.58 million by April 2026, a 25-fold increase. Retail investors dominate the market, with over 80 percent of Taiwan's adult population holding ETFs.</h2>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 1.5rem 0;">
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+    <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">台股 ETF 受益人</div>
+    <div style="font-size: 22px; font-weight: 500;">1,458 萬</div>
+    <div style="font-size: 12px; color: var(--color-text-tertiary); margin-top: 4px;">2026 年 4 月底</div>
+  </div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+    <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">滲透率(成人)</div>
+    <div style="font-size: 22px; font-weight: 500;">~80%</div>
+    <div style="font-size: 12px; color: var(--color-text-tertiary); margin-top: 4px;">5 人有 4 人持有</div>
+  </div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+    <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">7 年成長</div>
+    <div style="font-size: 22px; font-weight: 500;">25 倍</div>
+    <div style="font-size: 12px; color: var(--color-text-tertiary); margin-top: 4px;">2019→2026</div>
+  </div>
+</div>
+
+<div style="font-size: 14px; font-weight: 500; margin: 0 0 8px 0; color: var(--color-text-primary);">台股 ETF 受益人數成長軌跡</div>
+
+<div style="position: relative; width: 100%; height: 280px;">
+  <canvas id="growthChart" role="img" aria-label="Line chart of Taiwan stock ETF beneficiary count growth 2019-2026">Taiwan ETF beneficiaries: 2019: 460k, 2021: 200萬, 2023年5月: 650萬, 2024: 950萬, 2025: 1218萬, 2026年4月: 1458萬.</canvas>
+</div>
+
+<div style="margin: 1.5rem 0 8px 0; font-size: 14px; font-weight: 500; color: var(--color-text-primary);">不同類型 ETF 的持有人結構傾向</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 0 0 1rem 0;">
+  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px;">
+    <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">市值型 ETF</div>
+    <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px;">0050、006208</div>
+    <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+      <div style="flex: 60; background: #378ADD;"></div>
+      <div style="flex: 40; background: #B4B2A9;"></div>
+    </div>
+    <div style="font-size: 11px; color: var(--color-text-secondary);">散戶 ~60% / 法人 ~40%</div>
+  </div>
+  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px;">
+    <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">高股息 ETF</div>
+    <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px;">0056、00878、00919、00940</div>
+    <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+      <div style="flex: 92; background: #378ADD;"></div>
+      <div style="flex: 8; background: #B4B2A9;"></div>
+    </div>
+    <div style="font-size: 11px; color: var(--color-text-secondary);">散戶 >90% / 法人 <10%</div>
+  </div>
+  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px;">
+    <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">主動式 ETF</div>
+    <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px;">00981A、00992A 等</div>
+    <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+      <div style="flex: 80; background: #378ADD;"></div>
+      <div style="flex: 20; background: #B4B2A9;"></div>
+    </div>
+    <div style="font-size: 11px; color: var(--color-text-secondary);">散戶 ~80% / 法人 ~20%</div>
+  </div>
+  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px;">
+    <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">債券 ETF</div>
+    <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px;">00679B、00687B 等</div>
+    <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+      <div style="flex: 25; background: #378ADD;"></div>
+      <div style="flex: 75; background: #B4B2A9;"></div>
+    </div>
+    <div style="font-size: 11px; color: var(--color-text-secondary);">散戶 ~25% / 法人 ~75%</div>
+  </div>
+</div>
+
+<div style="display: flex; gap: 16px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 12px;">
+  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #378ADD;"></span>自然人(散戶)</span>
+  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #B4B2A9;"></span>法人(壽險、退休金、外資、自營等)</span>
+</div>
+
+<div style="margin: 0; padding: 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); font-size: 12px; color: var(--color-text-secondary); line-height: 1.6;">
+  資料來源:集保結算所(TDCC)、投信投顧公會(SITCA)、TWSE、媒體報導(2026 年 4-5 月)。受益人數曲線數據為各時點公開統計資料;持有人結構比例為市場分析推估值,實際各檔 ETF 受益人結構公布於集保「股權分散表」,需逐檔查詢。債券 ETF 之法人占比偏高反映壽險業大量配置投資級公司債 ETF 的市場特性。
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function() {
+  const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  const labelColor = isDark ? '#D3D1C7' : '#444441';
+  const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+  const lineColor = '#185FA5';
+  const fillColor = isDark ? 'rgba(53, 138, 221, 0.15)' : 'rgba(53, 138, 221, 0.12)';
+
+  new Chart(document.getElementById('growthChart'), {
+    type: 'line',
+    data: {
+      labels: ['2019', '2020', '2021', '2022', '2023.5', '2024', '2025', '2026.4'],
+      datasets: [{
+        data: [46, 110, 220, 410, 650, 950, 1218, 1458],
+        borderColor: lineColor,
+        backgroundColor: fillColor,
+        borderWidth: 2,
+        fill: true,
+        tension: 0.3,
+        pointRadius: 4,
+        pointBackgroundColor: lineColor,
+        pointBorderColor: lineColor
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => Math.round(ctx.parsed.y).toLocaleString() + ' 萬人'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: labelColor, font: { size: 11 } },
+          grid: { display: false }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: '受益人數(萬人)', color: labelColor, font: { size: 11 } },
+          ticks: {
+            color: labelColor,
+            callback: (v) => v.toLocaleString()
+          },
+          grid: { color: gridColor }
+        }
+      }
+    }
+  });
+})();
+</script>

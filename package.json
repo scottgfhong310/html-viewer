@@ -1,0 +1,24 @@
+{
+  "name": "html-viewer",
+  "version": "1.0.0",
+  "description": "在 sandbox iframe 內檢視 Claude 對話 HTML 片段的單頁 WebApp（注入 Claude 設計系統 token、執行片段內 script，如 Chart.js）+ 輕量 Express 後端（上傳 / 列表 / 清空）。",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "html",
+    "fragment",
+    "viewer",
+    "iframe",
+    "sandbox",
+    "express",
+    "materialize"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.0"
+  }
+}

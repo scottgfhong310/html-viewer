@@ -1,0 +1,25 @@
+/* English (en) */
+I18n.register('en', {
+  'title.suffix': 'HTML Viewer',
+  'empty.title': 'Drag an HTML fragment anywhere on the page',
+  'empty.hint': 'Files are uploaded to <code>/upload/html-viewer</code> (same name overwrites);<br />or <u>click to choose a file</u>. Supports <code>.html</code> / <code>.htm</code>.<br />You can also open one directly with <code>?link=&lt;path&gt;</code>.',
+  'drop.text': 'Release to upload to /upload/html-viewer',
+  'side.header': 'Files',
+  'side.noFiles': 'No files yet — drag one in to upload',
+  'loading': 'Loading…',
+  'badge.fullDoc': 'Full document',
+  'tool.menu': 'File list',
+  'tool.mode': 'Toggle light / dark',
+  'tool.lang': 'Language',
+  'tool.clear': 'Clear /upload/html-viewer',
+  'tool.openOriginal': 'Open the original file in a new tab',
+  'toast.badLink': 'Path not allowed (blocks traversal / external protocols)',
+  'toast.loadFail': 'Failed to load: {n} ({m})',
+  'toast.notHtml': 'Please drop an HTML file (.html / .htm)',
+  'toast.uploaded': 'Uploaded: {n}',
+  'toast.uploadFail': 'Upload failed: {n} ({m})',
+  'toast.listFail': 'Failed to load file list: {m}',
+  'toast.cleared': 'Cleared {n} file(s)',
+  'toast.clearFail': 'Clear failed: {m}',
+  'confirm.clear': 'Clear all files under /upload/html-viewer? This cannot be undone.'
+}, 'English');

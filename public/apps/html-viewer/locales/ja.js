@@ -1,0 +1,25 @@
+/* 日本語 (ja) */
+I18n.register('ja', {
+  'title.suffix': 'HTML Viewer',
+  'empty.title': 'HTML 断片をページ上にドラッグ＆ドロップ',
+  'empty.hint': 'ファイルは <code>/upload/html-viewer</code> にアップロードされます（同名は上書き）。<br />または<u>クリックしてファイルを選択</u>。対応：<code>.html</code> / <code>.htm</code>。<br /><code>?link=&lt;パス&gt;</code> で直接開くこともできます。',
+  'drop.text': '離して /upload/html-viewer にアップロード',
+  'side.header': 'ファイル一覧',
+  'side.noFiles': 'ファイルがありません。ドラッグしてアップロード',
+  'loading': '読み込み中…',
+  'badge.fullDoc': '完全な文書',
+  'tool.menu': 'ファイル一覧',
+  'tool.mode': 'ライト / ダーク切替',
+  'tool.lang': '言語',
+  'tool.clear': '/upload/html-viewer を空にする',
+  'tool.openOriginal': '元のファイルを新しいタブで開く',
+  'toast.badLink': '許可されないパス（トラバーサル / 外部プロトコルを遮断）',
+  'toast.loadFail': '読み込み失敗：{n}（{m}）',
+  'toast.notHtml': 'HTML ファイル（.html / .htm）をドロップしてください',
+  'toast.uploaded': 'アップロード完了：{n}',
+  'toast.uploadFail': 'アップロード失敗：{n}（{m}）',
+  'toast.listFail': 'ファイル一覧の取得に失敗：{m}',
+  'toast.cleared': '{n} 件のファイルを削除しました',
+  'toast.clearFail': '削除に失敗：{m}',
+  'confirm.clear': '/upload/html-viewer 内のすべてのファイルを削除しますか？この操作は取り消せません。'
+}, '日本語');
