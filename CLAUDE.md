@@ -43,6 +43,6 @@ npm install && node app.js          # → http://localhost:3000/apps/html-viewer
 - **matchMedia shim**：覆寫 iframe 內 `matchMedia('prefers-color-scheme')`，讓片段（如 Chart.js 配色）跟使用者選的主題而非系統主題。
 - **主題**：CSS 變數 light/dark，**預設 dark**（markdown-reader 形式：`<html data-theme="dark">` ＋ `localStorage('html-viewer-theme')||'dark'`）；防閃爍開機腳本同時 toggle `dark-mode`/`light-mode` class 驅動 `materialize-dark.css`（§5.1）。
 - **i18n**：`i18n.js` 引擎 + `locales/*.js`，`data-i18n` 屬性，預設 `zh-Hant`。片段內容是 **data，永不翻譯**。
-- **side-tool**：`#setting-menu`（檔案清單）/ `#setting-mode`（主題）/ `#setting-lang` / `#setting-clear`（清空，hover 轉紅）；用〔正統〕flex `.side-tools` 容器。
+- **side-tool**：`#setting-menu`（檔案清單）/ `#setting-mode`（主題）/ `#setting-lang` / `#setting-open`（在新分頁開原始檔，只在開檔時顯示、`window.open(link,'_blank','noopener')` + check 回饋）/ `#setting-clear`（清空，hover 轉紅）；用〔正統〕flex `.side-tools` 容器。**動作走側鍵、toolbar 不放操作鍵**（家族 §4.7）。
 - **安全**：sandbox `allow-scripts allow-same-origin`；只檢視信任的片段。後端操作目標寫死、`{ ok }` 信封；jQuery 3.7.1，後端不依賴 lodash。
 - **InProgress 鏡像**：同名前端也回灌到 `InProgress/public/apps/html-viewer/`，route 掛在 InProgress 的 `/api/html-viewer`；上傳沿用 InProgress 共用 `/api/upload?folder=html-viewer`（雙鍵 `{ ok, success }`，前端查 `resp.ok`）。
