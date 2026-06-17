@@ -21,7 +21,7 @@
   var frame = document.getElementById('hv-frame');
   var docName = document.getElementById('hv-doc-name');
   var docBadge = document.getElementById('hv-doc-badge');
-  var docOpen = document.getElementById('hv-doc-open');
+  var openBtn = document.getElementById('setting-open');
   var sideNav = document.getElementById('side-nav');
   var dropOverlay = document.getElementById('drop-overlay');
   var filePicker = document.getElementById('file-picker');
@@ -107,7 +107,6 @@
     docName.textContent = state.name || state.current || '';
     docName.title = state.name || state.current || '';
     docBadge.style.display = state.isFull ? '' : 'none';
-    docOpen.href = state.current || '#';
   }
 
   function showDoc(show) {
@@ -115,6 +114,24 @@
     docBox.style.display = show ? 'block' : 'none';
     emptyState.style.display = show ? 'none' : '';
     document.body.classList.toggle('is-empty', !show);
+    // 「在新分頁開原始檔」側鍵只在有開檔時出現（.side-tool 預設 flex）
+    if (openBtn) openBtn.style.display = show ? 'flex' : 'none';
+  }
+
+  // 「已執行」微回饋：icon 暫時變 check 800ms（家族 §5.5）
+  function setIconDone(el) {
+    var i = el && el.querySelector('i');
+    if (!i) return;
+    var orig = i.textContent;
+    i.textContent = 'check';
+    setTimeout(function () { i.textContent = orig; }, 800);
+  }
+
+  // 在新分頁開啟目前的原始檔
+  function openCurrent() {
+    if (!state.current) return;
+    window.open(state.current, '_blank', 'noopener');
+    setIconDone(openBtn);
   }
 
   /* ---------- loading 動畫 ---------- */
@@ -330,6 +347,7 @@
     });
     document.getElementById('setting-mode').addEventListener('click', toggleTheme);
     document.getElementById('setting-lang').addEventListener('click', cycleLang);
+    document.getElementById('setting-open').addEventListener('click', openCurrent);
     document.getElementById('setting-clear').addEventListener('click', clearFolder);
 
     // 上一頁／下一頁：依 ?link 重新載入
