@@ -11,6 +11,7 @@ I18n.register('en', {
   'tool.menu': 'File list',
   'tool.mode': 'Toggle light / dark',
   'tool.lang': 'Language',
+  'toast.lang': 'Switched to {name}',
   'tool.clear': 'Clear /upload/html-viewer',
   'tool.openOriginal': 'Open the original file in a new tab',
   'toast.badLink': 'Path not allowed (blocks traversal / external protocols)',

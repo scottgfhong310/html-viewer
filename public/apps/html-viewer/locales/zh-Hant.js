@@ -11,6 +11,7 @@ I18n.register('zh-Hant', {
   'tool.menu': '檔案清單',
   'tool.mode': '切換 light / dark',
   'tool.lang': '語言',
+  'toast.lang': '已切換為 {name}',
   'tool.clear': '清空 /upload/html-viewer',
   'tool.openOriginal': '在新分頁開啟原始檔',
   'toast.badLink': '不允許的路徑（擋路徑穿越 / 外部協定）',
