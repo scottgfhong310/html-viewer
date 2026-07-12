@@ -14,7 +14,7 @@
 
 ```
 app.js                              # Express 入口：port 3000；/ → 302 /apps/html-viewer/
-routes/upload.js                    # POST /api/upload?folder=html-viewer（共用最小版）
+routes/upload.js                    # POST /api/upload?folder=html-viewer（共用最小版；含檔名消毒 sanitizeUploadName，§3.4）
 routes/html-viewer.js               # GET /files、POST /clear
 public/apps/html-viewer/            # 前端（服務於 /apps/html-viewer/）
 ├─ index.html · html-viewer.css · html-viewer.js · html-viewer-lib.js
