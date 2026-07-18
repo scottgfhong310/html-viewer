@@ -20,7 +20,7 @@ public/apps/html-viewer/            # 前端（服務於 /apps/html-viewer/）
 ├─ index.html · html-viewer.css · html-viewer.js · html-viewer-lib.js
 ├─ materialize-dark.css             # 家族共用（Materialize 深色；materialize.css 之後載入）
 ├─ side-tool.css                    # 〔正統〕flex .side-tools 版（§5.5）
-├─ thinking-dot.css                 # 共用載入點 utility（與 markdown-library 同步、本份消費）
+├─ thinking-dot.css                 # 共用載入點 utility（權威版＝獨立 repo thinking-dot；本份消費、byte-identical 同步）
 ├─ i18n.js · locales/{zh-Hant,en,ja}.js
 public/upload/html-viewer/          # 上傳的片段（內容不進版控；附一個 sample）
 ```
