@@ -23,6 +23,9 @@ public/apps/html-viewer/            # 前端（服務於 /apps/html-viewer/）
 ├─ thinking-dot.css                 # 共用載入點 utility（權威版＝獨立 repo thinking-dot；本份消費、byte-identical 同步；載入點預設 2026-07-19 隨權威統一 14px→27px/2.1s）
 ├─ i18n.js · locales/{zh-Hant,en,ja}.js
 public/upload/html-viewer/          # 上傳的片段（內容不進版控；附一個 sample）
+scripts/make-icons.py               # viewer 六支共用的 icon 產生器（六份 byte-identical）
+public/apps/html-viewer/icons/              # App icon：母版 SVG 深/淺＋favicon(.ico/.svg)＋PNG 16–512＋manifest
+
 ```
 
 ## 執行 / 驗證
@@ -30,6 +33,28 @@ public/upload/html-viewer/          # 上傳的片段（內容不進版控；附
 ```bash
 npm install && node app.js          # → http://localhost:3000/apps/html-viewer/
 ```
+
+## App icon（viewer 六支共用模板）
+
+```bash
+python3 scripts/make-icons.py       # 重產整套 icon（SVG／PNG／.ico／manifest）
+```
+
+`docx-viewer`／`html-viewer`／`pptx-viewer`／`xlsx-viewer`／`rare-glyph`／`svg-style`
+**共用同一支產生器**（六份 byte-identical，照家族 A 類共用件慣例；改一份要六份一起同步，
+`md5` 應為單一 hash）。它靠**自己所在的 repo 目錄名**決定產哪一支，所以六份不必各自改參數。
+
+**共用的是 tile 系統，不是圖案**：同樣的圓角方塊、同樣的「紙」與同樣的 accent
+（`#90caf9`——六支的 `--accent` 本來就相同），一眼是一套；差異只在裡面那枚純幾何標記。
+本 app 是 **一對角括號（HTML 片段）**。
+
+- **刻意不用副檔名字樣**（`.docx` 這種）：六支裡 `rare-glyph`／`svg-style` 根本不是文件檢視器，
+  套上去會說謊。純幾何也省掉字型依賴（光柵化時不必內嵌字型）。
+- ⚠️ **PyMuPDF 兩個限制**（家族其他 icon 也踩過）：① **不渲染 `linearGradient`**，會整片退成黑色
+  → 母版一律純色底；② **以 SVG 宣告的 `width`/`height` 為渲染基準、不是 `viewBox`**
+  → 倍率要用「目標 ÷ 實際 page 寬」反推。
+- **產出要排出來看**：`html-viewer` 第一版的角括號尖端朝內，讀起來是一個 ✕ 而不是 `< >`——
+  九個 PNG 都產出、尺寸都對，光看檔案清單完全發現不了。
 
 ## 本 app 的 canon 重點
 
