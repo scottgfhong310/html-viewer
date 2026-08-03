@@ -18,6 +18,7 @@ I18n.register('ja', {
   'toast.loadFail': '読み込み失敗：{n}（{m}）',
   'toast.notHtml': 'HTML ファイル（.html / .htm）をドロップしてください',
   'toast.uploaded': 'アップロード完了：{n}',
+  'toast.uploadedRenamed': '同名のため {n} として保存しました',
   'toast.uploadFail': 'アップロード失敗：{n}（{m}）',
   'toast.listFail': 'ファイル一覧の取得に失敗：{m}',
   'toast.cleared': '{n} 件のファイルを削除しました',

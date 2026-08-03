@@ -18,6 +18,7 @@ I18n.register('zh-Hant', {
   'toast.loadFail': '載入失敗：{n}（{m}）',
   'toast.notHtml': '請拖入 HTML 檔（.html / .htm）',
   'toast.uploaded': '已上傳：{n}',
+  'toast.uploadedRenamed': '同名已存在，已存為：{n}',
   'toast.uploadFail': '上傳失敗：{n}（{m}）',
   'toast.listFail': '讀取檔案清單失敗：{m}',
   'toast.cleared': '已清空 {n} 個檔案',

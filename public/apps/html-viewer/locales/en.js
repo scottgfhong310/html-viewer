@@ -18,6 +18,7 @@ I18n.register('en', {
   'toast.loadFail': 'Failed to load: {n} ({m})',
   'toast.notHtml': 'Please drop an HTML file (.html / .htm)',
   'toast.uploaded': 'Uploaded: {n}',
+  'toast.uploadedRenamed': 'Name already exists — saved as: {n}',
   'toast.uploadFail': 'Upload failed: {n} ({m})',
   'toast.listFail': 'Failed to load file list: {m}',
   'toast.cleared': 'Cleared {n} file(s)',
